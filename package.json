@@ -1,0 +1,10 @@
+{
+  "name": "indonesia-areas",
+  "version": "1.0.0",
+  "description": "Indonesia areas",
+  "main": "index.js",
+  "type": "module",
+  "keywords": [],
+  "author": "Muhammad Syachrul",
+  "license": "ISC"
+}
