@@ -26,7 +26,7 @@ const build = (data) => {
         case AREA_TYPE.PROVINCE:
           acc.provinces.push({
             code: value.kode,
-            name: value.wilayah,
+            name: value.wilayah.toUpperCase(),
           });
           break;
 
@@ -34,7 +34,7 @@ const build = (data) => {
           acc.cities.push({
             code: value.kode,
             parent: value.kode.substring(0, AREA_TYPE.PROVINCE),
-            name: value.wilayah,
+            name: value.wilayah.toUpperCase(),
           });
           break;
 
@@ -42,7 +42,7 @@ const build = (data) => {
           acc.subdistricts.push({
             code: value.kode,
             parent: value.kode.substring(0, AREA_TYPE.CITY),
-            name: value.wilayah,
+            name: value.wilayah.toUpperCase(),
           });
           break;
 
@@ -50,7 +50,7 @@ const build = (data) => {
           acc.villages.push({
             code: value.kode,
             parent: value.kode.substring(0, AREA_TYPE.SUBDISTRICT),
-            name: value.wilayah,
+            name: value.wilayah.toUpperCase(),
           });
           break;
       }
